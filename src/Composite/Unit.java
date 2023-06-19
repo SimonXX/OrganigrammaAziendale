@@ -2,6 +2,7 @@ package Composite;
 
 import java.util.*;
 
+import Visitor.Visitor;
 public class Unit implements UnitComponent {
     private String name;
     private List<Employee> employees;
@@ -163,6 +164,10 @@ public class Unit implements UnitComponent {
         return !employees.isEmpty();
     }
 
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 
 
     @Override

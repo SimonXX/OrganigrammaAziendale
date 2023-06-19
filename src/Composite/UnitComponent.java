@@ -2,6 +2,7 @@ package Composite;
 
 
 import java.util.List;
+import Visitor.Visitor;
 
 public interface UnitComponent {
     String getName();
@@ -19,5 +20,6 @@ public interface UnitComponent {
     boolean hasSubUnits();
     boolean hasEmployees();
 
+    void accept(Visitor v);
 
 }
