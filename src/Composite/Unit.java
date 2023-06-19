@@ -190,4 +190,13 @@ public class Unit implements UnitComponent {
                 ", parentUnit=" + parentUnit +
                 '}';
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 }

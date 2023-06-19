@@ -23,6 +23,9 @@ public class Azienda {
 
     private List<Role> roles;
 
+    String[] roleNames;
+
+
     private List<String> nomiUtilizzati = new ArrayList<>();
 
     private int id;
@@ -221,4 +224,7 @@ public class Azienda {
 
         return employeeNames;
     }
+
+
+
 }
