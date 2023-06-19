@@ -250,7 +250,7 @@ public class OrganigrammaView {
                 infoRuoliAmmessi.add(scrollPaneTable1);
                 infoRuoliAmmessi.setVisible(true);
 
-                ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("res/image/UnitRoleView.png"));
+                ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("res/image/unit.png"));
 
                 // Imposta l'icona del JFrame
                 infoRuoliAmmessi.setIconImage(icon.getImage());
