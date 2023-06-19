@@ -3,8 +3,18 @@ package Composite;
 import java.util.*;
 
 import Visitor.Visitor;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "name")
+@JsonIgnoreProperties("allowedRoleNames")
 public class Unit implements UnitComponent {
     private String name;
+
+    @JsonIdentityReference
     private List<Employee> employees;
     private List<Unit> subUnits;
     private List<Role> allowedRoles;
