@@ -163,10 +163,7 @@ public class Unit implements UnitComponent {
         return !employees.isEmpty();
     }
 
-    @Override
-    public void accept(Visitor visitor) {
-        visitor.visit(this);
-    }
+
 
     @Override
     public String toString() {
