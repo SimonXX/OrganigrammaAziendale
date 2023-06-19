@@ -1,0 +1,10 @@
+The Text Area API
+The following tables list the commonly used JTextArea constructors and methods. Other methods you are likely to call are defined in JTextComponent, and listed in The Text Component API.
+
+You might also invoke methods on a text area that it inherits from its other ancestors, such as setPreferredSize, setForeground, setBackground, setFont, and so on. See The JComponent Class for tables of commonly used inherited methods.
+
+The API for using text areas includes the following categories:
+
+Setting or Obtaining Contents
+Fine Tuning Appearance
+Implementing Functionality
