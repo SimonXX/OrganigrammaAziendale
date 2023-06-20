@@ -666,12 +666,23 @@ public class OrganigrammaView {
                 }
                 System.out.println(text);
 
-                JTextArea textArea = new JTextArea(text);
+                JEditorPane textArea  = new JEditorPane();
+                textArea.setContentType("text/html");
+                textArea.setText(text);
                 textArea.setEditable(false);
+
 
                 JScrollPane scrollPane = new JScrollPane(textArea);
 
                 JPanel stampaPanel = new JPanel();
+                scrollPane.setPreferredSize(new Dimension(800, 800));
+
+                scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+                scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+
+                textArea.setCaretPosition(0);
+                // Imposta la posizione di scorrimento verticale all'inizio
+                scrollPane.getVerticalScrollBar().setValue(0);
                 stampaPanel.add(scrollPane);
 
                 helpFrame.setTitle("Istruzioni di utilizzo");

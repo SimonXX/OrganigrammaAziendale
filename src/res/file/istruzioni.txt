@@ -1,10 +1,135 @@
-The Text Area API
-The following tables list the commonly used JTextArea constructors and methods. Other methods you are likely to call are defined in JTextComponent, and listed in The Text Component API.
-
-You might also invoke methods on a text area that it inherits from its other ancestors, such as setPreferredSize, setForeground, setBackground, setFont, and so on. See The JComponent Class for tables of commonly used inherited methods.
-
-The API for using text areas includes the following categories:
-
-Setting or Obtaining Contents
-Fine Tuning Appearance
-Implementing Functionality
+<html>
+<h1 id="organigramma-aziendale">Organigramma Aziendale</h1>
+<p>L&#39;applicazione in esame consente la gestione di un organigramma aziendale.</p>
+<p>Nota: si allega un file <em>organigrammaExample.json</em> che, tramite l&#39;opzione <em>Carica Organigramma</em> </p>
+<p>successivamente illustrata, consente di caricare una versione d&#39;esempio di un organigramma.</p>
+<h2 id="visualizzazione">Visualizzazione</h2>
+<p>L&#39;interfaccia grafica mette a disposizione due tipi di visualizzazione per quanto riguarda</p>
+<p>la rappresentazione dell&#39;organigramma.</p>
+<h3 id="con-rettangoli">Con Rettangoli</h3>
+<p>Nel pannello centrale è possibile visualizzare le unità rappresentate</p>
+<p>come rettangoli e collegate alle relative sotto unità mediante dei segmenti.</p>
+<p>In questa visualizzazione vengono visualizzate solo le unità, non gli impiegati.</p>
+<p><em>la struttura grafica dell&#39;organigramma si adatta dinamicamente all&#39;inserimento</em></p>
+<p><em>ed all&#39;eliminazione delle varie unità</em>.</p>
+<h3 id="ad-albero">ad Albero</h3>
+<p>Sul pannello a sinistra è possibile visualizzare la struttura dell&#39;organigramma mediante una</p>
+<p>visualizzazione ad albero.</p>
+<p>Cliccando su una determinata unità sara possibile espanderne il contenuto, se presente,</p>
+<p>e visualizzarne eventuali sotto unità ed impiegati.</p>
+<p><em>Un impiegato all&#39;interno di un&#39;unità sarà visualizzato come figlio di essa nella gerarchia,</em></p>
+<p><em>inoltre, nella sua etichetta, saranno indicati i ruoli che ricopre nell&#39;unità stessa.</em></p>
+<h2 id="barra-strumenti">Barra Strumenti</h2>
+<p>Di seguito una lista dei comandi offerti dalla barra degli strumenti.</p>
+<p><em>al fine di visualizzare i comandi, è necessario fare click sul pannello apposito</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Modifica Nome Unità</td>
+</tr>
+<tr>
+<td style="text-align:left">Aggiungi Sotto Unità</td>
+</tr>
+<tr>
+<td style="text-align:left">Rimuovi Unità</td>
+</tr>
+<tr>
+<td style="text-align:left">Aggiungi Impiegato Azienda</td>
+</tr>
+<tr>
+<td style="text-align:left">Rimuovi Impiegato Azienda</td>
+</tr>
+<tr>
+<td style="text-align:left">Assegna Impiegato ad Unità</td>
+</tr>
+<tr>
+<td style="text-align:left">Rimuovi Impiegato da Unità</td>
+</tr>
+<tr>
+<td style="text-align:left">Crea Ruolo</td>
+</tr>
+<tr>
+<td style="text-align:left">Rimuovi Ruolo</td>
+</tr>
+<tr>
+<td style="text-align:left">Assegna Ruolo ad Unità</td>
+</tr>
+<tr>
+<td style="text-align:left">Rimuovi Ruolo da Unità</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modifica-nome-unit-">Modifica Nome Unità</h3>
+<p>Consente di modificare il nome di un&#39;unità esistente</p>
+<h3 id="aggiungi-sotto-unit-">Aggiungi Sotto Unità</h3>
+<p>Consente di definire una nuova sotto unità per un&#39;unità esistente</p>
+<h3 id="rimuovi-unit-">Rimuovi Unità</h3>
+<p>Consente di rimuovere un&#39;unità esistente</p>
+<p><em>Non è possibile rimuovere un&#39;unità che presenta delle sotto unità</em></p>
+<p>(è necessario partire dai nodi figli per l&#39;eliminazione)</p>
+<h3 id="aggiungi-impiegato-azienda">Aggiungi Impiegato Azienda</h3>
+<p>Consente di definire un nuovo impiegato nell&#39;azienda</p>
+<p><em>dopo averlo creato, esso potrà essere assegnato alle unità ricoprendo uno o più ruoli in esse</em></p>
+<h3 id="rimuovi-impiegato-azienda">Rimuovi Impiegato Azienda</h3>
+<p>Consente di rimuovere un impiegato dall&#39;azienda</p>
+<p><em>una volta eliminato, l&#39;impiegato non risulterà più assegnato alle unità per cui ricopriva un determinato ruolo</em></p>
+<h3 id="assegna-impiegato-ad-unit-">Assegna Impiegato ad Unità</h3>
+<p>Consente di assegnare un impiegato, con un determinato ruolo, ad una determinata unità </p>
+<p><em>è necessario che per l&#39;unità sia stato assegnato almeno un ruolo consentito, affinché vi possa</em></p>
+<p><em>essere assegnato un impiegato</em></p>
+<h3 id="rimuovi-impiegato-da-unit-">Rimuovi Impiegato da Unità</h3>
+<p>Consente di eliminare l&#39;assegnamento di un impiegato da un&#39;unità</p>
+<p><em>l&#39;impiegato continuerà a far parte dell&#39;azienda e potrà essere</em></p>
+<p><em>riassegnato ad una determinata unità</em></p>
+<h3 id="crea-ruolo">Crea Ruolo</h3>
+<p>Consente di definire un ruolo all&#39;interno dell&#39;azienda</p>
+<p><em>dopo averlo creato, esso potrà essere assegnato alle unità come ruolo consentito per l&#39;unità</em></p>
+<h3 id="rimuovi-ruolo">Rimuovi Ruolo</h3>
+<p>Consente di eliminare un ruolo definito all&#39;interno dell&#39;azienda</p>
+<p><em>eliminando un ruolo, tutti gli impiegati assegnati con quel determinato ruolo, a delle unità,</em></p>
+<p><em>non risulteranno più assegnati con quel ruolo (nel caso in cui ricoprano solo quel ruolo nell&#39;unità,</em></p>
+<p><em>essi non risulteranno più assegnati all&#39;unità)</em></p>
+<h3 id="assegna-ruolo-ad-unit-">Assegna Ruolo ad Unità</h3>
+<p>Consente di assegnare un ruolo ad una determinata unità</p>
+<p><em>se un ruolo è assegnato ad un&#39;unità, l&#39;impiegato potrà ricoprire quel determinato ruolo</em></p>
+<p><em>all&#39;interno dell&#39;unità</em></p>
+<h3 id="rimuovi-ruolo-da-unit-">Rimuovi Ruolo da Unità</h3>
+<p>Consente di eliminare l&#39;assegnamento di ruolo da un&#39;unità.</p>
+<p><em>il ruolo non sarà più consentito in quella unità, e gli impiegati</em></p>
+<p><em>non potranno più essere assegnati ad essa ricoprendo quel determinato ruolo</em></p>
+<p><em>(il ruolo continuerà a far parte dell&#39;azienda e potrà continuare ad essere assegnato alle varie unità)</em></p>
+<h2 id="pannello-laterale">Pannello laterale</h2>
+<h3 id="visualizza-ruoli-ammessi-per-unit-">Visualizza Ruoli Ammessi per Unità</h3>
+<p>Indirizza ad una tabella che associa ad ogni unità i ruoli consentiti in essa.</p>
+<h3 id="visualizza-impiegati-nell-azienda">Visualizza Impiegati nell&#39;Azienda</h3>
+<p>Indirizza ad una tabella che associa ad ogni impiegato, tutte le unità a cui è assegnato</p>
+<p>e tutti i ruoli che ricopre in esse.</p>
+<h3 id="visualizza-ruoli-creati-nell-azienda">Visualizza Ruoli Creati nell&#39;Azienda</h3>
+<p>Indirizza ad una tabella che consente di visualizzare tutti i ruoli creati all&#39;interno dell&#39;azienda.</p>
+<h3 id="visualizza-statistiche">Visualizza Statistiche</h3>
+<p>Indirizza ad una finestra che mostra le statistiche che caratterizzano l&#39;organigramma:</p>
+<ul>
+<li>totale unità</li>
+<li>totale impiegati</li>
+<li>totale ruoli</li>
+</ul>
+<h3 id="stampa-info-azienda">Stampa Info Azienda</h3>
+<p>Indirizza ad una finestra che fornisce una rappresentazione testuale dello stato corrente</p>
+<p>dell&#39;organigramma.</p>
+<h3 id="salva-organigramma">Salva Organigramma</h3>
+<p>Attraverso un menù di navigazione, consente di salvare lo stato corrente dell&#39;organigramma</p>
+<p>in un file in formato .json, che successivamente potrà essere ricaricato nell&#39;applicazione</p>
+<p>con l&#39;opzione <em>Carica Organigramma</em>.</p>
+<h3 id="carica-organigramma">Carica Organigramma</h3>
+<p>Attraverso un menù di navigazione, consente di caricare un organigramma salvato </p>
+<p>in formato .json attraverso l&#39;opzione <em>Salva Organigramma</em></p>
+<h3 id="azzera-organigramma">Azzera Organigramma</h3>
+<p>Consente di ripristinare l&#39;organigramma allo stato iniziale.</p>
+<h3 id="guida-all-utilizzo">Guida all&#39;utilizzo</h3>
+<p>Indirizza ad una finestra con le istruzioni relative all&#39;applicazione in esame.</p>
+</html>
