@@ -666,9 +666,12 @@ public class OrganigrammaView {
                 }
                 System.out.println(text);
 
+
+
                 JEditorPane textArea  = new JEditorPane();
                 textArea.setContentType("text/html");
                 textArea.setText(text);
+
                 textArea.setEditable(false);
 
 
