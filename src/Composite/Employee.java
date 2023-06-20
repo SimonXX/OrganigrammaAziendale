@@ -1,5 +1,6 @@
 package Composite;
 
+import Visitor.Visitor;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -10,7 +11,7 @@ import java.util.List;
 
 
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "name")
-public class Employee {
+public class Employee implements UnitComponent{
     private String name;
 
     @JsonIdentityReference
@@ -30,6 +31,8 @@ public class Employee {
     public String getName() {
         return name;
     }
+
+
 
     public void setName(String name) {
         this.name = name;
@@ -88,4 +91,10 @@ public class Employee {
                 ", roles=" + roles +
                 '}';
     }
+
+    @Override
+    public void accept(Visitor v) {
+
+    }
+
 }

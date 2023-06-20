@@ -1,11 +1,12 @@
 package Composite;
 
 
+import Visitor.Visitor;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "name")
-public class Role {
+public class Role implements UnitComponent{
     private String name;
     private int id;
 
@@ -20,6 +21,7 @@ public class Role {
     public String getName() {
         return name;
     }
+
 
     public void setName(String name) {
         this.name = name;
@@ -50,5 +52,9 @@ public class Role {
 
         Role otherRole = (Role) obj;
         return name.equals(otherRole.name);
+    }
+    @Override
+    public void accept(Visitor v) {
+
     }
 }

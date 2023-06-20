@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "name")
 @JsonIgnoreProperties("allowedRoleNames")
-public class Unit implements UnitComponent {
+public class Unit extends AbstractUnitComponent {
     private String name;
 
     @JsonIdentityReference
