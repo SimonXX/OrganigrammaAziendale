@@ -1,5 +1,8 @@
-package Composite;
+package Composite.Singleton;
 
+import Composite.Employee;
+import Composite.Role;
+import Composite.Unit;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -11,6 +14,7 @@ import java.util.List;
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "name")
 public class Azienda {
 
+    private static Azienda instance;
 
     @JsonIdentityReference
     private List<Employee> employees;
@@ -29,6 +33,27 @@ public class Azienda {
     private List<String> nomiUtilizzati = new ArrayList<>();
 
     private int id;
+
+
+    private Azienda(Unit rootUnit) {
+        this.rootUnit = rootUnit;
+        employees = new ArrayList<>();
+        units = new ArrayList<>();
+        roles = new ArrayList<>();
+        this.name = "azienda";
+        nomiUtilizzati = new ArrayList<>();
+
+        units.add(rootUnit);
+
+        nomiUtilizzati.add(rootUnit.getName());
+    }
+
+    public static Azienda getInstance(Unit rootUnit) {
+        if (instance == null) {
+            instance = new Azienda(rootUnit);
+        }
+        return instance;
+    }
 
     public int getId() {
         return id;
@@ -97,9 +122,7 @@ public class Azienda {
                 '}';
     }
 
-    public Azienda() {
-        // Costruttore di default vuoto
-    }
+
 
     public Unit findUnitByName(String name) {
         for (Unit unit : units) {
@@ -111,18 +134,9 @@ public class Azienda {
         return null; // Unità non trovata
     }
 
-    public Azienda(Unit rootUnit) {
-        this.rootUnit = rootUnit;
-        employees = new ArrayList<>();
-        units = new ArrayList<>();
-        roles = new ArrayList<>();
-        this.name = "azienda";
-        nomiUtilizzati = new ArrayList<>();
 
-        units.add(rootUnit);
 
-        nomiUtilizzati.add(rootUnit.getName());
-    }
+
 
     public String getName() {
         return name;
@@ -209,6 +223,8 @@ public class Azienda {
 
         return null; // Impiegato non trovato
     }
+
+    public Azienda(){}
 
     public List<String> getNomiUtilizzati() {
         return nomiUtilizzati;

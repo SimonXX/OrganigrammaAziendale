@@ -1,7 +1,7 @@
 package ObserverGUI;
 
 
-import Composite.Azienda;
+import Composite.Singleton.Azienda;
 import Composite.Unit;
 
 public class OrganigrammaModel {

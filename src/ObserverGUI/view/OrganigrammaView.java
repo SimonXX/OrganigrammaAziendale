@@ -20,7 +20,7 @@ import java.io.*;
 
 import Composite.Unit;
 import Composite.Role;
-import Composite.Azienda;
+import Composite.Singleton.Azienda;
 import Composite.Employee;
 
 //La classe OrganigrammaView rappresenta la vista dell'organigramma e si occupa della visualizzazione grafica degli elementi dell'organigramma.
@@ -720,7 +720,7 @@ public class OrganigrammaView {
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Azienda aziendaCaricata = new Azienda(new Unit("Azienda"));
+                Azienda aziendaCaricata = Azienda.getInstance(new Unit("Azienda"));
 
                 // Aggiorna il modello dell'organigramma con l'organigramma caricato
 
