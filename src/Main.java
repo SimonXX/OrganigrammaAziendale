@@ -13,17 +13,11 @@ public class Main {
         Azienda azienda = new Azienda(rootUnit);
 
 
-        // Creazione del modello, della vista e del presenter dell'organigramma
+        // Creazione del modello e della vista dell'organigramma
         OrganigrammaModel model = new OrganigrammaModel(rootUnit, azienda);
         OrganigrammaView view = new OrganigrammaView(model);
 
-        Visitor visitor = new PrintVisitor();
-        rootUnit.accept(visitor);
 
-        Visitor visitor2 = new StatsVisitor();
-        rootUnit.accept(visitor2);
-
-        ((StatsVisitor) visitor2).printStatistics();
     }
 
 }
