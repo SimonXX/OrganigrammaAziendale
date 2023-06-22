@@ -95,7 +95,7 @@ Consente di rimuovere un impiegato dall'azienda.
 
 Consente di assegnare un impiegato, con un determinato ruolo, ad una determinata unità.
 
-*è necessario che per l'unità sia stato assegnato almeno un ruolo consentito, affinché vi possa*
+*è necessario che per l'unità sia stato assegnato almeno un ruolo consentito, affinché vi si possa*
 
 *essere assegnato un impiegato*
 
