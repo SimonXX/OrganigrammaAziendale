@@ -4,8 +4,8 @@
     <root id="archive" name="OrganigrammaAziendale.jar">
       <element id="module-output" name="OrganigrammaAziendale" />
       <element id="extracted-dir" path="$USER_HOME$/Downloads/jar_files/jackson-annotations-2.15.2.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Downloads/jar_files/jackson-core-2.15.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Downloads/jar_files/jackson-databind-2.15.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/jar_files/jackson-core-2.15.2.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
