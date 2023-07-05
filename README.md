@@ -65,7 +65,7 @@ Di seguito una lista dei comandi offerti dalla barra degli strumenti.
 
 ### Modifica Nome Unità
 
-Consente di modificare il nome di un'unità esistente.
+Consente di modificare il nome di un'unità esistente all'interno dell'azienda.
 
 ### Aggiungi Sotto Unità
 
