@@ -1,6 +1,8 @@
 
 # Organigramma Aziendale
 
+[Relazione Progetto con schemi UML](RelazioneProgetto.pdf)
+
 L'applicazione in esame consente la gestione di un organigramma aziendale.
 
 
