@@ -67,7 +67,7 @@ Di seguito una lista dei comandi offerti dalla barra degli strumenti.
 
 ### Modifica Nome Unità
 
-Consente di modificare il nome di un'unità esistente.
+Consente di modificare il nome di un'unità esistente all'interno dell'azienda.
 
 ### Aggiungi Sotto Unità
 
@@ -97,7 +97,7 @@ Consente di rimuovere un impiegato dall'azienda.
 
 Consente di assegnare un impiegato, con un determinato ruolo, ad una determinata unità.
 
-*è necessario che per l'unità sia stato assegnato almeno un ruolo consentito, affinché vi possa*
+*è necessario che per l'unità sia stato assegnato almeno un ruolo consentito, affinché vi si possa*
 
 *essere assegnato un impiegato*
 
